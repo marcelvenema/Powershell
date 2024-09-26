@@ -93,7 +93,7 @@ function Resize-Image {
 }
 
 # Process each jpg image in the folder
-Get-ChildItem -Path $sourceFolder -Include ('*.jpg', '*.jpeg') -Recurse | ForEach-Object {
+Get-ChildItem -Path $sourceFolder -Include ('*.jpg', '*.jpeg', '*.png') -Recurse | ForEach-Object {
     Resize-Image -filePath $_.FullName
 }
 
